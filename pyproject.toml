@@ -1,0 +1,13 @@
+[project]
+name = "video-transcriber"
+version = "1.0.0"
+description = "Transcribe a local video to a timestamped .txt on the Desktop (Whisper, Apple Silicon)"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "mlx-whisper>=0.4.3",
+]
+
+[tool.uv]
+package = false
+environments = ["sys_platform == 'darwin' and platform_machine == 'arm64'"]
